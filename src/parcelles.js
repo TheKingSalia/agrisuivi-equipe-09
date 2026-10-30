@@ -27,11 +27,21 @@ export function surfaceTotale(parcelles) {
 }
 
 export function resumeParCulture(parcelles) {
-    const resume = {};
-    for (const parcelle of parcelles) {
-      if (resume[parcelle.culture] === undefined){
-        
-      }
+  const resume = {};
+
+  for (const parcelle of parcelles) {
+    const culture = parcelle.culture;
+    if (!resume[culture]) {
+      resume[culture] = {
+        nombre: 0,
+        surface: 0
+      };
     }
 
+    resume[culture].nombre += 1;
+
+    resume[culture].surface += parcelle.surface;
+  }
+
+  return resume;
 }
