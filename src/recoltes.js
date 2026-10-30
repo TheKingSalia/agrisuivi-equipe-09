@@ -1,9 +1,8 @@
-// MEMBRE 3 — Récoltes : calculer la production, le rendement et le revenu.
-// Fiche : fiches/3-recoltes.md · Vérifier : npm run test:recoltes
-
-// Renvoie le total des kilos récoltés sur une parcelle. Aucune récolte : 0.
 export function totalRecolte(recoltes, idParcelle) {
-  throw new Error("TODO Membre 3 : coder totalRecolte dans src/recoltes.js");
+  return recoltes.filter(
+    (parcelle) => {
+      return parcelle.id === idParcelle 
+    } ).reduce((accum,valeur)=> accum + valeur.surface, 0)
 }
 
 // Renvoie le rendement en kg par hectare, arrondi à l'entier le plus proche.
