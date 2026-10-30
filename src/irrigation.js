@@ -8,11 +8,13 @@ export function relevesDeParcelle(releves, idParcelle) {
   )
 }
 
-// Renvoie la moyenne des humidités, arrondie à l'entier le plus proche.
-// Liste vide : null (on ne peut pas calculer de moyenne).
+
 export function moyenneHumidite(releves) {
-  return moyenneHumidite()
-  
+  if (releves.length === 0) {
+    return null;}
+     
+const somme = releves.reduce((total, releve) => total + releve.humidite, 0);
+  return Math.round(somme / releves.length);
 }
 
 // Renvoie 'INCONNU', 'ARROSER', 'DRAINER' ou 'OK'.
