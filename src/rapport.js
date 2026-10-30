@@ -51,3 +51,7 @@ export function construireRapport(donnees, date) {
   return lignes.join("\n") + "\n";
 }
 
+export async function enregistrerRapport(chemin, texte) {
+  await mkdir(dirname(chemin), { recursive: true });
+  await writeFile(chemin, texte, "utf8");
+}
