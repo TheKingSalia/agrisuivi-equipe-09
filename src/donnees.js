@@ -61,3 +61,12 @@ export function creerReleve(parcelle, humiditeTexte, temperatureTexte, date) {
   };
 }
 
+export async function ajouterReleve(chemin, releve) {
+  const releves = await lireJson(chemin);
+  releves.push(releve);
+  const texte = JSON.stringify(releves, null, 2);
+
+  await writeFile(chemin, texte, 'utf8');
+  return releves.length;
+}
+
