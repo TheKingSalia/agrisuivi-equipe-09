@@ -8,16 +8,22 @@ export function trouverParcelle(parcelles, id) {
     } )
 }
 
-// Renvoie un nouveau tableau avec seulement les parcelles de cette culture.
+
 export function parcellesParCulture(parcelles, culture) {
-  throw new Error(
-    "TODO Membre 1 : coder parcellesParCulture dans src/parcelles.js",
-  );
+  return parcelles.filter(
+    (parcelle) => {
+      culture === parcelle.culture
+    } )
 }
 
-// Renvoie la somme des surfaces (en hectares). Liste vide : 0.
+
 export function surfaceTotale(parcelles) {
-  throw new Error("TODO Membre 1 : coder surfaceTotale dans src/parcelles.js");
+    if(parcelles.length === 0){
+      return 0
+    } else{
+      return parcelles.reduce((accum,valeur)=> acc + val, 0
+    )
+    }
 }
 
 // Renvoie un objet : pour chaque culture, le nombre de parcelles et leur surface.
