@@ -1,8 +1,8 @@
 export function totalRecolte(recoltes, idParcelle) {
   return recoltes.filter(
     (parcelle) => {
-      return parcelle.id === idParcelle 
-    } ).reduce((accum,valeur)=> accum + valeur.surface, 0)
+      return parcelle.parcelle === idParcelle 
+    } ).reduce((accum,valeur)=> accum + valeur.kg, 0)
 }
 
 // Renvoie le rendement en kg par hectare, arrondi à l'entier le plus proche.
