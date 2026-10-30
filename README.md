@@ -158,9 +158,9 @@ La date de la première ligne est celle du jour. Le formateur testera aussi votr
 
 ## Notre équipe
 
-| Rôle                  | Prénom et nom | Compte GitHub |
-| --------------------- | ------------- | ------------- |
-| Membre 1 — Parcelles  |               |               |
-| Membre 2 — Irrigation |               |               |
-| Membre 3 — Récoltes   |               |               |
-| Membre 4 — Données    |               |               |
+| Rôle                  | Prénom et nom            | Compte GitHub |
+| --------------------- | -------------            | ------------- |
+| Membre 1 — Parcelles  | KABA KONATE              |               |
+| Membre 2 — Irrigation | KONE PAGADJOUFOUGOU      |               |
+| Membre 3 — Récoltes   | FOFANA FANTA LATIFA      |               |
+| Membre 4 — Données    | KAMAGATE SALIA ABDALLAH  |               |
