@@ -32,3 +32,32 @@ export async function chargerDonnees(dossier) {
   };
 }
 
+export function creerReleve(parcelle, humiditeTexte, temperatureTexte, date) {
+
+  if (!parcelle) {
+    throw new Error("La parcelle est obligatoire");
+  }
+
+  const humidite = Number(humiditeTexte);
+  const temperature = Number(temperatureTexte);
+
+  if (
+    Number.isNaN(humidite) ||
+    humidite < 0 ||
+    humidite > 100
+  ) {
+    throw new Error("L'humidité doit être un nombre entre 0 et 100");
+  }
+
+  if (Number.isNaN(temperature)) {
+    throw new Error("La température doit être un nombre");
+  }
+
+  return {
+    parcelle: parcelle.toUpperCase(),
+    date: date,
+    humidite: humidite,
+    temperature: temperature
+  };
+}
+
